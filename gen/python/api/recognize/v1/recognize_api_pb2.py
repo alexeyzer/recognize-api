@@ -17,7 +17,7 @@ from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$api/recognize/v1/recognize-api.proto\x12\rrecognize.api\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\"-\n\x15recognizePhotoRequest\x12\x14\n\x05image\x18\x01 \x01(\x0cR\x05image\"4\n\x16recognizePhotoResponse\x12\x1a\n\x08\x63\x61tegory\x18\x01 \x01(\tR\x08\x63\x61tegory2\x8b\x01\n\x11ProductApiService\x12v\n\x0erecognizePhoto\x12$.recognize.api.recognizePhotoRequest\x1a$.recognize.api.recognizePhotoRequest\"\x18\x82\xd3\xe4\x93\x02\x12:\x01*\"\r/v1/recognizeB\x9f\x01\n\x11\x63om.recognize.apiB\x11RecognizeApiProtoP\x01Z\"github.com/alexeyzer/recognize-api\xa2\x02\x03RAX\xaa\x02\rRecognize.Api\xca\x02\rRecognize\\Api\xe2\x02\x19Recognize\\Api\\GPBMetadata\xea\x02\x0eRecognize::Apib\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n$api/recognize/v1/recognize-api.proto\x12\rrecognize.api\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\"-\n\x15recognizePhotoRequest\x12\x14\n\x05image\x18\x01 \x01(\x0cR\x05image\"4\n\x16recognizePhotoResponse\x12\x1a\n\x08\x63\x61tegory\x18\x01 \x01(\tR\x08\x63\x61tegory2\x8d\x01\n\x13RecognizeApiService\x12v\n\x0erecognizePhoto\x12$.recognize.api.recognizePhotoRequest\x1a$.recognize.api.recognizePhotoRequest\"\x18\x82\xd3\xe4\x93\x02\x12:\x01*\"\r/v1/recognizeB\x9f\x01\n\x11\x63om.recognize.apiB\x11RecognizeApiProtoP\x01Z\"github.com/alexeyzer/recognize-api\xa2\x02\x03RAX\xaa\x02\rRecognize.Api\xca\x02\rRecognize\\Api\xe2\x02\x19Recognize\\Api\\GPBMetadata\xea\x02\x0eRecognize::Apib\x06proto3')
 
 
 
@@ -37,17 +37,17 @@ recognizePhotoResponse = _reflection.GeneratedProtocolMessageType('recognizePhot
   })
 _sym_db.RegisterMessage(recognizePhotoResponse)
 
-_PRODUCTAPISERVICE = DESCRIPTOR.services_by_name['ProductApiService']
+_RECOGNIZEAPISERVICE = DESCRIPTOR.services_by_name['RecognizeApiService']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'\n\021com.recognize.apiB\021RecognizeApiProtoP\001Z\"github.com/alexeyzer/recognize-api\242\002\003RAX\252\002\rRecognize.Api\312\002\rRecognize\\Api\342\002\031Recognize\\Api\\GPBMetadata\352\002\016Recognize::Api'
-  _PRODUCTAPISERVICE.methods_by_name['recognizePhoto']._options = None
-  _PRODUCTAPISERVICE.methods_by_name['recognizePhoto']._serialized_options = b'\202\323\344\223\002\022:\001*\"\r/v1/recognize'
+  _RECOGNIZEAPISERVICE.methods_by_name['recognizePhoto']._options = None
+  _RECOGNIZEAPISERVICE.methods_by_name['recognizePhoto']._serialized_options = b'\202\323\344\223\002\022:\001*\"\r/v1/recognize'
   _RECOGNIZEPHOTOREQUEST._serialized_start=146
   _RECOGNIZEPHOTOREQUEST._serialized_end=191
   _RECOGNIZEPHOTORESPONSE._serialized_start=193
   _RECOGNIZEPHOTORESPONSE._serialized_end=245
-  _PRODUCTAPISERVICE._serialized_start=248
-  _PRODUCTAPISERVICE._serialized_end=387
+  _RECOGNIZEAPISERVICE._serialized_start=248
+  _RECOGNIZEAPISERVICE._serialized_end=389
 # @@protoc_insertion_point(module_scope)

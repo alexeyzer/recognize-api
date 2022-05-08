@@ -5,7 +5,7 @@ import grpc
 from gen.python.api.recognize.v1 import recognize_api_pb2 as api_dot_recognize_dot_v1_dot_recognize__api__pb2
 
 
-class ProductApiServiceStub(object):
+class RecognizeApiServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,13 +15,13 @@ class ProductApiServiceStub(object):
             channel: A grpc.Channel.
         """
         self.recognizePhoto = channel.unary_unary(
-                '/recognize.api.ProductApiService/recognizePhoto',
+                '/recognize.api.RecognizeApiService/recognizePhoto',
                 request_serializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.SerializeToString,
                 response_deserializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.FromString,
                 )
 
 
-class ProductApiServiceServicer(object):
+class RecognizeApiServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def recognizePhoto(self, request, context):
@@ -31,7 +31,7 @@ class ProductApiServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_ProductApiServiceServicer_to_server(servicer, server):
+def add_RecognizeApiServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'recognizePhoto': grpc.unary_unary_rpc_method_handler(
                     servicer.recognizePhoto,
@@ -40,12 +40,12 @@ def add_ProductApiServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'recognize.api.ProductApiService', rpc_method_handlers)
+            'recognize.api.RecognizeApiService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class ProductApiService(object):
+class RecognizeApiService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -59,7 +59,7 @@ class ProductApiService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/recognize.api.ProductApiService/recognizePhoto',
+        return grpc.experimental.unary_unary(request, target, '/recognize.api.RecognizeApiService/recognizePhoto',
             api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.SerializeToString,
             api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.FromString,
             options, channel_credentials,

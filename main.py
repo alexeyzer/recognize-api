@@ -47,7 +47,7 @@ class ClassificationModel():
         return self.labels[index]
 
 
-class ProductApiService(pb_grpc.ProductApiService):
+class RecognizeApiService(pb_grpc.RecognizeApiService):
 
     def __init__(self, *args, **kwargs):
         self.ClassificationClass = ClassificationModel()
@@ -66,7 +66,7 @@ class ProductApiService(pb_grpc.ProductApiService):
 
 def serve():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    pb_grpc.add_ProductApiServiceServicer_to_server(ProductApiService(), server)
+    pb_grpc.add_RecognizeApiServiceServicer_to_server(RecognizeApiService(), server)
     server.add_insecure_port('[::]:8082')
     server.start()
     server.wait_for_termination()
