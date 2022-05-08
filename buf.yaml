@@ -1,0 +1,5 @@
+version: v1
+name: buf.build/azudin/recognize-api
+deps:
+  - buf.build/grpc-ecosystem/grpc-gateway
+  - buf.build/envoyproxy/protoc-gen-validate

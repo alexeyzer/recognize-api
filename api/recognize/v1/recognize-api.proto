@@ -1,0 +1,24 @@
+syntax = "proto3";
+package recognize.api;
+
+option go_package = "github.com/alexeyzer/recognize-api";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+service ProductApiService {
+  rpc recognizePhoto(recognizePhotoRequest) returns (recognizePhotoRequest) {
+    option (google.api.http) = {
+      post: "/v1/recognize"
+      body: "*"
+    };
+  };
+}
+
+message recognizePhotoRequest {
+     bytes image = 1;
+}
+
+message recognizePhotoResponse {
+    string category = 1;
+}
