@@ -43,7 +43,6 @@ class ClassificationModel():
         inp = Variable(image_tensor)
         output = self.model(inp)
         index = output.data.cpu().numpy().argmax()
-        print(self.labels[index])
         return self.labels[index]
 
 
@@ -73,4 +72,5 @@ def serve():
 
 
 if __name__ == '__main__':
+    print("app starting")
     serve()

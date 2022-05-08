@@ -17,7 +17,7 @@ class RecognizeApiServiceStub(object):
         self.recognizePhoto = channel.unary_unary(
                 '/recognize.api.RecognizeApiService/recognizePhoto',
                 request_serializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.SerializeToString,
-                response_deserializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.FromString,
+                response_deserializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoResponse.FromString,
                 )
 
 
@@ -36,7 +36,7 @@ def add_RecognizeApiServiceServicer_to_server(servicer, server):
             'recognizePhoto': grpc.unary_unary_rpc_method_handler(
                     servicer.recognizePhoto,
                     request_deserializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.FromString,
-                    response_serializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.SerializeToString,
+                    response_serializer=api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -61,6 +61,6 @@ class RecognizeApiService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/recognize.api.RecognizeApiService/recognizePhoto',
             api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.SerializeToString,
-            api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoRequest.FromString,
+            api_dot_recognize_dot_v1_dot_recognize__api__pb2.recognizePhotoResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
